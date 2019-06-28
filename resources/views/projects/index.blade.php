@@ -11,9 +11,11 @@
 <h1>Myboard</h1>
 
 <ul>
-    @foreach ($projects as $project)
+    @forelse ($projects as $project)
         <li>{{ $project->title }}</li>
-    @endforeach
+    @empty
+        <li>There is no projects.</li>
+    @endforelse
 </ul>
 </body>
 </html>
